@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style type="text/css">
+    .title{
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .table{
+        width:750px;
+        height:auto;
+        margin-top:30px;
+        color: #909399;
+        font-weight: 500;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 2px #ececec;
+    }
+    .table tbody td,
+    .table thead th{
+        height: 50px;
+        text-align: left;
+        padding: 0 25px;
+    }
+    .table thead th{
+        border-bottom: 1px solid #ebeef5;
+
+    }
+    .table tbody td{
+
+    }
+    .table .btn{
+        float: left;
+        margin-right: 5px;
+    }
+    .btn{
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        border-color: #dcdfe6;
+        color: #606266;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        transition: .1s;
+        font-weight: 500;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+    .btn:hover{
+        color: #409eff;
+        border-color: #c6e2ff;
+        background-color: #ecf5ff;
+    }
+    .btn-primary{
+        color: #fff;
+        background-color: #409eff;
+        border-color: #409eff;
+    }
+    .btn-primary:hover{
+        background: #66b1ff;
+        border-color: #66b1ff;
+        color: #fff;
+    }
+    .btn-lg{
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    .btn-sm{
+        padding: 9px 15px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .btn-mini{
+        padding: 7px 12px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .btn-danger{
+        color: #fff;
+        background-color: #f56c6c;
+        border-color: #f56c6c;
+    }
+    .btn-danger:hover{
+        background: #f78989;
+        border-color: #f78989;
+        color: #fff;
+    }
+    .add-alert{
+        width: 400px;
+        height: auto;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 2px #ececec;
+        margin-top: 50px;
+        position: relative;
+    }
+    .add-alert .title{
+        height: 50px;
+        line-height: 50px;
+        padding:0 25px;
+        border-bottom: 1px solid #ebeef5;
+        box-sizing: border-box;
+    }
+    .list-item {
+        margin-bottom: 22px;
+        padding: 0 25px;
+    }
+    .list-item label{
+        text-align: right;
+        vertical-align: middle;
+        float: left;
+        font-size: 14px;
+        color: #606266;
+        line-height: 40px;
+        padding: 0 12px 0 0;
+        box-sizing: border-box;
+    }
+    .input-item{
+        line-height: 40px;
+        position: relative;
+        font-size: 14px;
+        margin-left: 60px;
+    }
+    .input-item input{
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        height: 40px;
+        line-height: 40px;
+        outline: none;
+        padding: 0 15px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        width: 100%;
+    }
+    .close-btn{
+        position: absolute;
+        color: #606266;
+        border-radius: 12px;
+        line-height: 20px;
+        text-align: center;
+        height: 20px;
+        width: 20px;
+        font-size: 22px;
+        padding: 1px;
+        top: 12px;
+        right: 12px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .close-btn:hover{
+        color: #f56c6c;
+    }
+    .close-btn::before {
+        content: "\2716";
+    }
+
+
+    .btn-close-group{
+        border-top: 1px solid #ebeef5;
+        text-align: right;
+        padding: 10px 15px;
+    }
+    </style>
+
+</head>
+<body>
+<div class="title">主机{{ user_list2.id }}详情</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>IP地址</th>
+                    <th>端口号</th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>业务线</th>
+                    <th>管理组</th>
+                    <th>管理员</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                <td>{{ obj.id }}</td>
+                <td>{{ obj.ip }}</td>
+                <td>{{ obj.user }}</td>
+                <td>{{ obj.port }}</td>
+                <td>{{ obj.password }}</td>
+                <td>{{ obj.business }}</td>
+                <td>{{ obj.Asset_group }}</td>
+                <td>{{ obj.Admin }}</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+</body>
+</html>
+
+
+
+
